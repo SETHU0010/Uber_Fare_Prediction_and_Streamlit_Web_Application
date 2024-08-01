@@ -1,5 +1,7 @@
 # 🚖 Uber Fare Prediction and Streamlit Web Application
 
+## Project Link : https://uberfarepredictionandappwebapplication-8rrbpyur2hvlrr3huhxoj2.streamlit.app/
+
 ## 🌟 Overview
 
 This project aims to develop a machine learning model to predict Uber ride fares based on various features extracted from ride data. Additionally, it includes a Streamlit web application that allows users to input ride details and get fare estimates.
