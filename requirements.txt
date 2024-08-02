@@ -1,4 +1,5 @@
-streamlit==1.23.1
-pandas
-pickle5
-boto3
+streamlit==1.15.0
+pandas==2.0.3
+boto3==1.26.10
+python-dotenv==1.0.0
+scikit-learn==1.2.2
