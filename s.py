@@ -193,7 +193,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-        = st.number_input('Passenger Count', int(df['passenger_count'].min()), int(df['passenger_count'].max()))
+if df is not None and scale is not None and model is not None:
+    # Input
+    passenger_count = st.number_input('Passenger Count', int(df['passenger_count'].min()), int(df['passenger_count'].max()))
     distance = st.number_input('Distance in km', float(df['distance(km)'].min()), float(df['distance(km)'].max()))
     day = st.number_input('Day', int(df['Day'].min()), int(df['Day'].max()))
     year = st.number_input('Year', int(df['year'].min()), int(df['year'].max()))
@@ -212,4 +214,4 @@ if __name__ == "__main__":
         fare_amount = model.predict(new_data_scaled)
         st.markdown(f'# Fare Amount: ${fare_amount.round(2)[0]}')
 else:
-    st.error('Required files not loaded properly.')
+    st.error('Required files not loaded properly.')  
