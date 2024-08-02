@@ -3,13 +3,14 @@ import pandas as pd
 import pickle
 import boto3
 from io import BytesIO
+import os
 
 # title
 st.title('🚖 Uber Fare Prediction and Streamlit Web Application 🌐')
 
-# AWS S3 Configuration
-access_key = "AKIAU6GDYLUVQ2BQ2XW2"
-secret_key = "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"
+# AWS S3 Configuration from environment variables
+access_key = os.getenv("AWS_ACCESS_KEY_ID")
+secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 s3_bucket_name = 'uber-fare-prediction-data'
 region_name = 'ap-south-1'
 
@@ -50,12 +51,12 @@ if df is not None:
 else:
     st.error('Data not loaded properly.')
 
-
+# Define functions for sections
 def Problem_Statement():
     st.header("📝 Problem Statement")
     st.write("Develop a machine learning model to predict Uber ride fares based on ride data features. Create a Streamlit web application that allows users to input ride details and receive a fare estimate.")
 
-def objective():
+def Objective():
     st.header("🎯 Objective")
     st.write("Develop an accurate regression model to predict Uber ride fares and create a Streamlit web app for users to estimate fares, deployed on AWS for scalability.")
 
@@ -84,7 +85,7 @@ def Workflow():
     5. **Deployment**: Deploy the model and application on AWS. 🚀
     """)
 
-def prerequisites():
+def Prerequisites():
     st.header("⚙️ Prerequisites")
     st.write("Before using the application, ensure you have the following prerequisites set up:")
     st.write("1. **Python Skills**: Data preprocessing, machine learning. 🐍")
@@ -92,7 +93,7 @@ def prerequisites():
     st.write("3. **AWS Knowledge**: S3, RDS, deployment. ☁️")
     st.write("4. **Data**: Uber ride dataset (CSV format). 📊")
 
-def required_python_libraries():
+def Required_Python_Libraries():
     st.header("📚 Required Python Libraries")
     st.write("The following Python libraries are required for the project:")
     libraries = ["pandas", "streamlit", "boto3", "pickle5"]
@@ -116,7 +117,7 @@ def Features():
     st.header("🔍 Features")
     st.write("Features include pickup and dropoff locations, time of day, fare amount, and passenger count.")
 
-def Skills_take_away():
+def Skills_Take_Away():
     st.header("💡 Skills Take Away From This Project")
     st.caption("🔧 Data Cleaning and Preprocessing")
     st.caption("🔍 Feature Engineering")
@@ -140,14 +141,13 @@ def Conclusion():
     st.write("Developed a predictive model for Uber fares and a Streamlit app for user estimates. 🎯")
     st.write("Deployed on AWS, showcasing skills in data preprocessing, machine learning, and web application development. 🚀")
 
-def about_the_developer():
+def About_The_Developer():
     st.header("🔍 About the Developer")
     st.subheader("📬 Contact Details")
     st.write("Email: [sethumadhavanvelu2002@example.com](mailto:sethumadhavanvelu2002@example.com)")
     st.write("Phone: 📞 9159299878")
     st.write("[LinkedIn ID](https://www.linkedin.com/in/sethumadhavan-v-b84890257/)")
     st.write("[GitHub Profile](https://github.com/SETHU0010/Uber_Fare_Prediction_and_Streamlit_Web_Application)")
-
 
 def main():
     # Main layout with two columns
@@ -167,7 +167,7 @@ def main():
         if choice == "Problem Statement":
             Problem_Statement()
         elif choice == "Objective":
-            objective()
+            Objective()
         elif choice == "Domain":
             Domain()
         elif choice == "Approach":
@@ -175,24 +175,25 @@ def main():
         elif choice == "Workflow":
             Workflow()
         elif choice == "Prerequisites":
-            prerequisites()
+            Prerequisites()
         elif choice == "Required Python Libraries":
-            required_python_libraries()
+            Required_Python_Libraries()
         elif choice == "Dataset":
             Dataset()
         elif choice == "Features":
             Features()
         elif choice == "Skills Take Away From This Project":
-            skills_take_away()
+            Skills_Take_Away()
         elif choice == "Results":
             Result()
         elif choice == "Conclusion":
             Conclusion()
         elif choice == "About the Developer":
-            about_the_developer()
+            About_The_Developer()
 
 if __name__ == "__main__":
     main()
+
 if df is not None and scale is not None and model is not None:
     # Input
     passenger_count = st.number_input('Passenger Count', int(df['passenger_count'].min()), int(df['passenger_count'].max()))
