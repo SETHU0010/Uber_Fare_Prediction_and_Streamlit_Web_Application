@@ -143,6 +143,7 @@ def Conclusion():
 def about_the_developer():
     st.header("🔍 About the Developer")
     st.subheader("📬 Contact Details")
+    st.write("Name : Sethumadhavan V")
     st.write("Email: [sethumadhavanvelu2002@example.com](mailto:sethumadhavanvelu2002@example.com)")
     st.write("Phone: 📞 9159299878")
     st.write("[LinkedIn ID](https://www.linkedin.com/in/sethumadhavan-v-b84890257/)")
