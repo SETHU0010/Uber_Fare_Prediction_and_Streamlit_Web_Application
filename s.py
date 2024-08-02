@@ -117,17 +117,17 @@ def Features():
     st.write("Features include pickup and dropoff locations, time of day, fare amount, and passenger count.")
 
 def Skills_Take_Away_From_This_Project():
-    st.header("Skills Take Away From This Project")
-    st.caption("Data Cleaning and Preprocessing")
-    st.caption("Feature Engineering")
-    st.caption("Exploratory Data Analysis (EDA)")
-    st.caption("Regression Modeling")
-    st.caption("Hyperparameter Tuning")
-    st.caption("Model Evaluation")
-    st.caption("Geospatial Analysis")
-    st.caption("Time Series Analysis")
-    st.caption("Web Application Development with Streamlit")
-    st.caption("Deployment on AWS")
+    st.header("💡 Skills Take Away From This Project")
+    st.caption("🔧 Data Cleaning and Preprocessing")
+    st.caption("🔍 Feature Engineering")
+    st.caption("📊 Exploratory Data Analysis (EDA)")
+    st.caption("📈 Regression Modeling")
+    st.caption("⚙️ Hyperparameter Tuning")
+    st.caption("📉 Model Evaluation")
+    st.caption("🌍 Geospatial Analysis")
+    st.caption("🕒 Time Series Analysis")
+    st.caption("🌐 Web Application Development with Streamlit")
+    st.caption("☁️ Deployment on AWS")
 
 def Result():
     st.header("🏆 Results")
@@ -183,7 +183,7 @@ def main():
         elif choice == "Features":
             Features()
         elif choice == "Skills Take Away From This Project":
-            skills_take_away()
+            Skills_Take_Away_From_This_Project()
         elif choice == "Results":
             Result()
         elif choice == "Conclusion":
