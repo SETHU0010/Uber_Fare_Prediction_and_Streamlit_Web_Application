@@ -116,7 +116,7 @@ def Features():
     st.header("🔍 Features")
     st.write("Features include pickup and dropoff locations, time of day, fare amount, and passenger count.")
 
-def Skills_take_away():
+def Skills_Take_Away_From_This_Project():
     st.header("Skills Take Away From This Project")
     st.caption("Data Cleaning and Preprocessing")
     st.caption("Feature Engineering")
