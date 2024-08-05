@@ -2,5 +2,5 @@ streamlit==1.23.1
 pandas==2.1.0
 numpy==1.24.4
 scikit-learn==1.3.2
-pickle5==0.0.11  # Optional, depending on your Python version
-boto3==1.26.0    # If you're using AWS services like S3
+pickle5==0.0.11
+boto3==1.26.0
